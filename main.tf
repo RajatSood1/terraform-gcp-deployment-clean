@@ -10,7 +10,7 @@ terraform {
 provider "google" {
   project     = "astute-atlas-448617-n8"
   region      = "us-central1"
-  credentials = file("credentials.json")   
+  credentials = file("credentials.json")
 }
 
 resource "google_storage_bucket" "example" {
@@ -25,3 +25,4 @@ resource "google_project_iam_member" "storage_admin" {
   project = "astute-atlas-448617-n8"
   role    = "roles/storage.admin"
   member  = "terraform-github@astute-atlas-448617-n8.iam.gserviceaccount.com"
+}
