@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project = "your-project-id"   
+  project = "astute-atlas-448617-n8"   
   region  = "us-central1"
 }
 
