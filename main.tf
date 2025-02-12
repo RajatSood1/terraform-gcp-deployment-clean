@@ -24,5 +24,5 @@ resource "google_storage_bucket" "example" {
 resource "google_project_iam_member" "storage_admin" {
   project = "astute-atlas-448617-n8"
   role    = "roles/storage.admin"
-  member  = "terraform-github@astute-atlas-448617-n8.iam.gserviceaccount.com"
+  member  = "serviceAccount:terraform-github@astute-atlas-448617-n8.iam.gserviceaccount.com"
 }
