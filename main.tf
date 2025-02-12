@@ -14,7 +14,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "example" {
-  name     = "my-secure-bucket-1234556"
+  name     = "my-secure-bucket-12345536"
   location = "US"
 
   versioning {
