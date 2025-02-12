@@ -8,8 +8,9 @@ terraform {
 }
 
 provider "google" {
-  project = "astute-atlas-448617-n8"   
-  region  = "us-central1"
+  project     = "astute-atlas-448617-n8"
+  region      = "us-central1"
+  credentials = file("credentials.json")   
 }
 
 resource "google_storage_bucket" "example" {

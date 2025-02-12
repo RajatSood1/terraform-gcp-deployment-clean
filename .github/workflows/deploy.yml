@@ -14,10 +14,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
 
       - name: Authenticate to GCP
-        run: echo '${{ secrets.GOOGLE_CREDENTIALS }}' > credentials.json
+        run: |
+          echo '${{ secrets.GOOGLE_CREDENTIALS }}' > credentials.json
+          chmod 600 credentials.json
 
       - name: Terraform Init
         run: terraform init
